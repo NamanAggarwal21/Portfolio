@@ -186,6 +186,8 @@
   .stat .lbl { font-size: 15.5px; line-height: 1.3; text-align: right; color: var(--ink-soft); }
 
   .index { margin-bottom: 8px; }
+  .lead .index { margin-top: 40px; }
+  @media (min-width: 720px) { .lead .index ol { column-count: 2; column-gap: 32px; } .lead .index li { break-inside: avoid; } }
   .index h3 { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 4px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
   .index ol { list-style: none; margin: 0; padding: 0; }
   .index li a { display: flex; gap: 8px; align-items: baseline; padding: 7px 0; text-decoration: none; border-bottom: 1px dotted rgba(29,29,27,.5); }
@@ -250,9 +252,9 @@
   .feature .photo { aspect-ratio: 4 / 3; }
   .second-feature { border-top: 4px solid var(--rule); margin-top: 56px; padding-top: 28px; display: grid; grid-template-columns: 1fr; gap: 16px; }
   @media (min-width: 960px) {
-    .second-feature { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 0; }
-    .second-feature > :first-child { padding-right: 28px; border-right: 1px solid var(--rule); }
-    .second-feature > :last-child { padding-left: 28px; }
+    .second-feature { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 0; align-items: center; }
+    .second-feature > :first-child { padding-right: 36px; }
+    .second-feature > :last-child { padding-left: 36px; border-left: 1px solid var(--rule); }
   }
   .pull { font-family: var(--display); font-style: italic; font-size: 28px; line-height: 1.15; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 14px 0; margin: 16px 0; }
   .pull::before { content: "“"; color: var(--accent); }
@@ -294,17 +296,17 @@
   .infographic svg { width: 100%; height: auto; display: block; }
   .logo-fig { margin: 16px 0 4px; }
   .logo-fig .photo { aspect-ratio: 16 / 7; }
-  .diagram { margin-top: 18px; max-width: 340px; }
+  .diagram { margin: 0 auto; max-width: 340px; }
   .diagram svg { width: 100%; height: auto; display: block; }
 
   /* ---------- Hobbies (Chess) ---------- */
   .chess { display: grid; grid-template-columns: 1fr; gap: 24px; }
   @media (min-width: 900px) {
-    .chess { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 0; }
+    .chess { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 0; align-items: center; }
     .chess > :first-child { padding-right: 28px; border-right: 1px solid var(--rule); }
     .chess > :last-child { padding-left: 28px; }
   }
-  .board svg { width: 100%; max-width: 460px; height: auto; display: block; }
+  .board svg { width: 100%; max-width: 420px; height: auto; display: block; }
   .board .pieces { font-family: "Apple Symbols", "Segoe UI Symbol", "Noto Sans Symbols 2", "DejaVu Sans", serif; }
   .answer { margin-top: 10px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .answer summary { cursor: pointer; padding: 10px 0; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
@@ -338,9 +340,9 @@
   /* ---------- Contact ---------- */
   .letters { display: grid; grid-template-columns: 1fr; gap: 24px; }
   @media (min-width: 900px) {
-    .letters { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 0; }
-    .letters > :first-child { padding-right: 28px; border-right: 1px solid var(--rule); }
-    .letters > :last-child { padding-left: 28px; }
+    .letters { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 0; align-items: center; }
+    .letters > :first-child { padding-right: 28px; }
+    .letters > :last-child { padding-left: 28px; border-left: 1px solid var(--rule); }
   }
   .email-big { font-family: var(--body); font-weight: 400; letter-spacing: -.01em; font-size: clamp(22px, 3.6vw, 40px); line-height: 1.15; word-break: break-all; display: inline-block; margin: 6px 0 14px; }
   .links { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
@@ -630,6 +632,19 @@
         <p>It handles <b>33K+ chats a day</b>, and the LLM workflows I integrated classify tickets and read customer intent along the way. Only about <b>21%</b> of chats ever reach a person.</p>
         <p>When one does, the agent works in <b>OneView</b>, the support console I re-architected on GraphQL. <a href="#work">More in Work →</a></p>
       </div>
+      <div class="index">
+        <h3>Inside today’s edition</h3>
+        <ol>
+          <li><a href="#work"><span>Six systems, one support stack</span><span class="dots">B1</span></a></li>
+          <li><a href="#commits"><span>1,221 GitLab contributions in a year</span><span class="dots">C1</span></a></li>
+          <li><a href="#projects"><span>Hack Week runner-up: the agent that watches once</span><span class="dots">D1</span></a></li>
+          <li><a href="#honours"><span>Outstanding Performer, two quarters running</span><span class="dots">E1</span></a></li>
+          <li><a href="#competitive-programming"><span>Knight on LeetCode, four stars on CodeChef</span><span class="dots">F1</span></a></li>
+          <li><a href="#skills"><span>Classifieds: the full toolkit</span><span class="dots">G1</span></a></li>
+          <li><a href="#hobbies"><span>Chess column: 1500+ on chess.com, 1700+ on lichess</span><span class="dots">H1</span></a></li>
+          <li><a href="#contact"><span>Letters to the editor</span><span class="dots">I1</span></a></li>
+        </ol>
+      </div>
     </article>
 
     <aside>
@@ -646,19 +661,6 @@
         <div class="stat"><span class="num">~21%</span><span class="lbl">of chats escalated to humans</span></div>
       </div>
 
-      <div class="index">
-        <h3>Inside today’s edition</h3>
-        <ol>
-          <li><a href="#work"><span>Six systems, one support stack</span><span class="dots">B1</span></a></li>
-          <li><a href="#commits"><span>1,221 GitLab contributions in a year</span><span class="dots">C1</span></a></li>
-          <li><a href="#projects"><span>Hack Week runner-up: the agent that watches once</span><span class="dots">D1</span></a></li>
-          <li><a href="#honours"><span>Outstanding Performer, two quarters running</span><span class="dots">E1</span></a></li>
-          <li><a href="#competitive-programming"><span>Knight on LeetCode, four stars on CodeChef</span><span class="dots">F1</span></a></li>
-          <li><a href="#skills"><span>Classifieds: the full toolkit</span><span class="dots">G1</span></a></li>
-          <li><a href="#hobbies"><span>Chess column: 1500+ on chess.com, 1700+ on lichess</span><span class="dots">H1</span></a></li>
-          <li><a href="#contact"><span>Letters to the editor</span><span class="dots">I1</span></a></li>
-        </ol>
-      </div>
     </aside>
   </section>
 
@@ -790,6 +792,10 @@
       <div>
         <p class="kicker">Side project</p>
         <h3 class="h-feature">Build your own GPT, on your own documents</h3>
+        <p>I built <b>Agentic RAG Platform</b> so anyone can create GPT-style assistants over their private documents, with an admin UI, a chat UI and a REST API. It runs on OpenAI, Gemini or local Ollama models.</p>
+        <p class="stack">Python · FastAPI · LlamaIndex · Qdrant · Docker — <a href="https://github.com/NamanAggarwal21" target="_blank" rel="noopener">GitHub ↗</a></p>
+      </div>
+      <div>
         <figure class="diagram">
           <svg viewBox="0 0 300 300" role="img" aria-labelledby="rag-title">
             <title id="rag-title">How the Agentic RAG Platform works: documents are ingested and embedded with LlamaIndex, stored in Qdrant, retrieved by an agent that calls an LLM, and answered through a chat UI or REST API.</title>
@@ -820,10 +826,6 @@
           </svg>
           <figcaption>How it works. <span class="mono">Models: OpenAI · Gemini · Ollama</span></figcaption>
         </figure>
-      </div>
-      <div>
-        <p>I built <b>Agentic RAG Platform</b> so anyone can create GPT-style assistants over their private documents, with an admin UI, a chat UI and a REST API. It runs on OpenAI, Gemini or local Ollama models.</p>
-        <p class="stack">Python · FastAPI · LlamaIndex · Qdrant · Docker — <a href="https://github.com/NamanAggarwal21" target="_blank" rel="noopener">GitHub ↗</a></p>
       </div>
     </div>
   </section>
