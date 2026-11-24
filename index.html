@@ -302,27 +302,20 @@
   /* ---------- Hobbies (Chess) ---------- */
   .chess { display: grid; grid-template-columns: 1fr; gap: 24px; }
   @media (min-width: 900px) {
-    .chess { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 0; align-items: center; }
+    .chess { grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 0; align-items: center; }
     .chess > :first-child { padding-right: 28px; border-right: 1px solid var(--rule); }
     .chess > :last-child { padding-left: 28px; }
   }
-  .board svg { width: 100%; max-width: 420px; height: auto; display: block; }
+  .board svg { width: 100%; max-width: 300px; height: auto; display: block; }
   .board .pieces { font-family: "Apple Symbols", "Segoe UI Symbol", "Noto Sans Symbols 2", "DejaVu Sans", serif; }
-  .answer { margin-top: 10px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-  .answer summary { cursor: pointer; padding: 10px 0; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
-  .answer summary:hover { color: var(--accent); }
-  .answer p { font-size: 16px; }
-  .ratings { display: grid; grid-template-columns: 1fr; border-top: 4px solid var(--rule); border-bottom: 1px solid var(--rule); margin: 6px 0 18px; }
-  .ratings > div { padding: 14px 0; border-bottom: 1px solid rgba(29,29,27,.35); }
-  .ratings > div:last-child { border-bottom: 0; }
-  @media (min-width: 560px) {
-    .ratings { grid-template-columns: repeat(3, 1fr); }
-    .ratings > div { padding: 14px 16px; border-bottom: 0; border-right: 1px solid var(--rule); }
-    .ratings > div:first-child { padding-left: 0; }
-    .ratings > div:last-child { border-right: 0; }
-  }
+  .ratings { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 4px solid var(--rule); border-bottom: 1px solid var(--rule); margin: 6px 0 14px; }
+  .ratings > div { padding: 12px 10px; border-right: 1px solid var(--rule); min-width: 0; }
+  .ratings > div:first-child { padding-left: 0; }
+  .ratings > div:last-child { border-right: 0; }
+  @media (min-width: 560px) { .ratings > div { padding: 14px 16px; } }
+  @media (max-width: 559px) { .ratings .big { font-size: 32px !important; } .ratings .kicker { font-size: 10px; } }
   .ratings .kicker { margin-bottom: 4px; }
-  .ratings .big { font-family: var(--display); font-size: 54px; line-height: 1; }
+  .ratings .big { font-family: var(--display); font-size: 44px; line-height: 1; }
   .ratings .mono { font-size: 11px; color: var(--muted); margin: 4px 0 0; }
 
   /* ---------- Classifieds (Skills) ---------- */
@@ -641,7 +634,7 @@
           <li><a href="#honours"><span>Outstanding Performer, two quarters running</span><span class="dots">E1</span></a></li>
           <li><a href="#competitive-programming"><span>Knight on LeetCode, four stars on CodeChef</span><span class="dots">F1</span></a></li>
           <li><a href="#skills"><span>Classifieds: the full toolkit</span><span class="dots">G1</span></a></li>
-          <li><a href="#hobbies"><span>Chess column: 1500+ on chess.com, 1700+ on lichess</span><span class="dots">H1</span></a></li>
+          <li><a href="#hobbies"><span>Chess: 1500+ on chess.com, 1700+ on lichess</span><span class="dots">H1</span></a></li>
           <li><a href="#contact"><span>Letters to the editor</span><span class="dots">I1</span></a></li>
         </ol>
       </div>
@@ -974,17 +967,13 @@
             <text x="180" y="169" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="500" letter-spacing="4" fill="#c03f13">CHECKMATE</text>
           </g>
         </svg>
-        <figcaption>Reader’s puzzle: <b>White to play and mate in one.</b> Tap the board to replay. <span class="mate-result">1. Re8# — checkmate. The king has nowhere to go.</span></figcaption>
-        <details class="answer">
-          <summary>Show the answer</summary>
-          <p><b>1. Re8#.</b> Black’s own pawns on f7, g7 and h7 leave the king nowhere to go. It’s the classic back-rank mate.</p>
-        </details>
+        <figcaption><b>White to play, mate in one.</b> Tap to replay. <span class="mate-result">1. Re8# — checkmate.</span></figcaption>
       </figure>
 
       <article>
-        <p class="kicker">Chess · Rapid &amp; puzzles</p>
-        <h3 class="h-feature">Off the clock, I’m on one: 1500+ on chess.com, 1700+ on lichess</h3>
-        <p class="deck">I mostly play rapid games and puzzles. Spot the pattern, calculate, commit.</p>
+        <p class="kicker">Chess</p>
+        <h3 class="h-feature">Off the clock, I play chess</h3>
+        <p class="deck">Mostly rapid games and puzzles.</p>
 
         <div class="ratings">
           <div>
