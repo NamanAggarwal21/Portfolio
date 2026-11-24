@@ -110,6 +110,8 @@
     padding: 8px 0;
   }
   .motto em { font-family: var(--display); font-size: 22px; font-style: italic; }
+  /* the display italic draws 1 like an l, so set the digits in the body face */
+  .digits { font-family: var(--body); font-style: italic; font-size: .9em; font-variant-numeric: lining-nums; }
 
   /* ---------- Sticky section nav ---------- */
   .nav {
@@ -552,7 +554,7 @@
     <div class="paper-ears"><span>Vol. I</span><span>Delhi NCR edition</span><span>Late city</span></div>
     <div class="paper-mast">Naman Aggarwal</div>
     <div class="paper-rule"></div>
-    <div class="paper-motto">“Arranging zeros and ones in the right order.”<span>Software Engineer · ixigo</span></div>
+    <div class="paper-motto">“Arranging <span class="digits">0</span>s and <span class="digits">1</span>s in the right order.”<span>Software Engineer · ixigo</span></div>
     <div class="paper-head">33,000 travel chats a day, and only one in five needs a human</div>
     <div class="paper-body">
       <div class="paper-cols"><i></i><i></i></div>
@@ -567,7 +569,7 @@
   <h1 class="masthead">Naman Aggarwal</h1>
   <hr class="rule-thick">
   <div class="motto">
-    <em>“Arranging zeros and ones in the right order.”</em>
+    <em>“Arranging <span class="digits">0</span>s and <span class="digits">1</span>s in the right order.”</em>
     <span class="mono">Software Engineer · Backend, AI &amp; Systems · ixigo</span>
   </div>
   <div class="ticker" aria-label="Latest headlines">
