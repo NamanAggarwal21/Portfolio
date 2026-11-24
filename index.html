@@ -136,6 +136,13 @@
   .nav .resume { margin-left: auto; }
   .nav .resume a { border-right: 0; background: var(--ink); color: var(--paper); padding-left: 14px; }
   .nav .resume a:hover { background: var(--accent); color: var(--paper); }
+  /* wide screens: share the full width between the sections, so there's no empty gap before Résumé */
+  @media (min-width: 1080px) {
+    .nav li { flex: 1 1 auto; }
+    .nav a { text-align: center; }
+    .nav li:first-child a { padding-left: 14px; }
+    .nav .resume { margin-left: 0; }
+  }
 
   section { scroll-margin-top: 56px; }
   /* paint the phone status-bar band above the sticky menu */
@@ -440,9 +447,8 @@
   .board.played #mate-stamp { opacity: 1; transform: rotate(-8deg) scale(1); transition: opacity .15s ease 2.1s, transform .35s cubic-bezier(.2,1.5,.4,1) 2.1s; }
 
   /* ---------- Hover underline in the nav ---------- */
-  .nav li:not(.resume) a { background: linear-gradient(currentColor, currentColor) 0 calc(100% - 8px) / 0 1px no-repeat; transition: background-size .3s ease, color .2s; }
-  .nav li:not(.resume) a:hover { background-size: calc(100% - 28px) 1px; background-position-x: 14px; }
-  .nav li:first-child a:hover { background-position-x: 0; background-size: calc(100% - 14px) 1px; }
+  .nav li:not(.resume) a { text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1px; text-underline-offset: 5px; transition: text-decoration-color .25s ease, color .2s; }
+  .nav li:not(.resume) a:hover { text-decoration-color: currentColor; }
 
   /* ---------- Commit calendar ---------- */
   .commit-stats { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 4px solid var(--rule); border-bottom: 1px solid var(--rule); margin: 8px 0 22px; }
